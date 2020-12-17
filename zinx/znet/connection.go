@@ -9,7 +9,7 @@ import (
 // 连接模块
 type Connection struct {
 	Conn      *net.TCPConn      // 当前连接的 socket TCP 套接字
-	ConnID    uint32            // 当前连接的ID
+	ConnID    uint32            // 当前连接的 ID
 	isClosed  bool              // 当前连接的状态
 	handleAPI ziface.HandleFunc // 当前连接所绑定的处理业务方法 API
 	ExitChan  chan bool         // 告知当前连接已经退出/停止的 channel
