@@ -5,7 +5,7 @@
       <paths name="192.168.179.130">
         <serverdata>
           <mappings>
-            <mapping deploy="/home/xsc/code/go/src/zinx_project" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/home/xsc/code/go/src/zinx_release/zinx_project" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
