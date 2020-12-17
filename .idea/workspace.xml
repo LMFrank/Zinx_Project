@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="7ca10ad6-c584-47f1-ab5c-97d731501b44" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="7ca10ad6-c584-47f1-ab5c-97d731501b44" name="Default Changelist" comment="Zinx_V2.0 完成了connection模块的搭建">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zinx/znet/connection.go" beforeDir="false" afterPath="$PROJECT_DIR$/zinx/znet/connection.go" afterDir="false" />
+    </list>
+>>>>>>> 6decb0e... Zinx_V0.3 完成了request模块的搭建
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="D:\Program Language\Go" />
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="ProjectId" id="1ljVG0KJVBqJVqE7TcDhByfQTHb" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Code\Go\src\zinx_project\Demo\ZinxV0.1" />
+      <recent name="D:\Code\Go\src\zinx_project\zinx" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="go build zinx/Demo/ZinxV0.1" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="zinx_project" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/Demo/ZinxV0.1/server.go" />
+      <package value="zinx/Demo/ZinxV0.1" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build zinx/Demo/ZinxV0.1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+<<<<<<< HEAD
+=======
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Zinx_V2.0 完成了connection模块的搭建" />
+    <option name="LAST_COMMIT_MESSAGE" value="Zinx_V2.0 完成了connection模块的搭建" />
+  </component>
+>>>>>>> 6decb0e... Zinx_V0.3 完成了request模块的搭建
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="617" y="214" key="#Deployment" timestamp="1608123931739">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="617" y="214" key="#Deployment/0.0.2048.1112@0.0.2048.1112" timestamp="1608123931739" />
+    <state x="670" y="231" key="#Options" timestamp="1608123951569">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="670" y="231" key="#Options/0.0.2048.1112@0.0.2048.1112" timestamp="1608123951569" />
+    <state x="601" y="201" key="#SSH_Configurations" timestamp="1608123502433">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="601" y="201" key="#SSH_Configurations/0.0.2048.1112@0.0.2048.1112" timestamp="1608123502433" />
+<<<<<<< HEAD
+    <state width="2005" height="305" key="GridCell.Tab.0.bottom" timestamp="1608122607110">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="305" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1608122607110" />
+    <state width="2005" height="305" key="GridCell.Tab.0.center" timestamp="1608122607110">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="305" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1608122607110" />
+    <state width="2005" height="305" key="GridCell.Tab.0.left" timestamp="1608122607109">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="305" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1608122607109" />
+    <state width="2005" height="305" key="GridCell.Tab.0.right" timestamp="1608122607110">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="305" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1608122607110" />
+=======
+    <state x="805" y="296" key="FileChooserDialogImpl" timestamp="1608127768803">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="805" y="296" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1608127768803" />
+    <state width="2005" height="305" key="GridCell.Tab.0.bottom" timestamp="1608136654024">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="305" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1608136654024" />
+    <state width="2005" height="305" key="GridCell.Tab.0.center" timestamp="1608136654024">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="305" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1608136654024" />
+    <state width="2005" height="305" key="GridCell.Tab.0.left" timestamp="1608136654024">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="305" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1608136654024" />
+    <state width="2005" height="305" key="GridCell.Tab.0.right" timestamp="1608136654024">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="305" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1608136654024" />
+    <state x="526" y="200" key="SettingsEditor" timestamp="1608127793613">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="526" y="200" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1608127793613" />
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1608136615487">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1608136615487" />
+>>>>>>> 6decb0e... Zinx_V0.3 完成了request模块的搭建
+    <state x="903" y="286" key="ftp.server.browser" timestamp="1608123521160">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="903" y="286" key="ftp.server.browser/0.0.2048.1112@0.0.2048.1112" timestamp="1608123521160" />
+  </component>
+</project>
