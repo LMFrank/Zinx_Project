@@ -19,13 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01072c32-80a3-48bc-8a47-e3523c363025" name="Default Changelist" comment="[zinx_v0.4]完成了全局配置模块的搭建和测试">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sshConfigs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zinx/ziface/imessgae.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zinx/znet/message.go" afterDir="false" />
+    <list default="true" id="01072c32-80a3-48bc-8a47-e3523c363025" name="Default Changelist" comment="[zinx_v0.5]完成了基础message模块的搭建">
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zinx/utils/globalobj.go" beforeDir="false" afterPath="$PROJECT_DIR$/zinx/utils/globalobj.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zinx/ziface/imessgae.go" beforeDir="false" afterPath="$PROJECT_DIR$/zinx/ziface/imessgae.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +66,24 @@
       <recent name="D:\Code\Go\src\zinx_project\demo\ZinxV0.4" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="TestDataPack in zinx/zinx/znet" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="zinx_project" />
+      <working_directory value="$PROJECT_DIR$/zinx/znet" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="zinx/zinx/znet" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestDataPack\E$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Test.TestDataPack in zinx/zinx/znet" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
@@ -86,7 +102,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[zinx_v0.4]完成了全局配置模块的搭建和测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="[zinx_v0.4]完成了全局配置模块的搭建和测试" />
+    <MESSAGE value="[zinx_v0.5]完成了基础message模块的搭建" />
+    <option name="LAST_COMMIT_MESSAGE" value="[zinx_v0.5]完成了基础message模块的搭建" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -100,6 +117,22 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="601" y="201" key="#SSH_Configurations/0.0.2048.1112@0.0.2048.1112" timestamp="1608388380668" />
+    <state width="2005" height="305" key="GridCell.Tab.0.bottom" timestamp="1608449382207">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="305" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1608449382207" />
+    <state width="2005" height="305" key="GridCell.Tab.0.center" timestamp="1608449382206">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="305" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1608449382206" />
+    <state width="2005" height="305" key="GridCell.Tab.0.left" timestamp="1608449382206">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="305" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1608449382206" />
+    <state width="2005" height="305" key="GridCell.Tab.0.right" timestamp="1608449382206">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="305" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1608449382206" />
     <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1608388058816">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>

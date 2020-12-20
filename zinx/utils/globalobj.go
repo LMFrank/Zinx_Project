@@ -2,6 +2,7 @@ package utils
 
 import (
 	"encoding/json"
+	"errors"
 	"io/ioutil"
 	"zinx/zinx/ziface"
 )
@@ -26,15 +27,16 @@ type GlobalObj struct {
 
 var GlobalObject *GlobalObj
 
-func (g *GlobalObj) Reload() {
+func (g *GlobalObj) Reload() error {
 	data, err := ioutil.ReadFile("conf/zinx.json")
 	if err != nil {
-		panic(err)
+		return errors.New("can't reload zinx.json")
 	}
 	err = json.Unmarshal(data, &GlobalObject)
 	if err != nil {
-		panic(err)
+		return errors.New("can't unmarshal zinx.json")
 	}
+	return nil
 }
 
 func init() {
@@ -49,5 +51,8 @@ func init() {
 	}
 
 	// 从配置文件中加载用户自定义的配置参数
-	GlobalObject.Reload()
+	err := GlobalObject.Reload()
+	if err != nil {
+		return
+	}
 }
