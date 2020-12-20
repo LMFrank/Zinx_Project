@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="01072c32-80a3-48bc-8a47-e3523c363025" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sshConfigs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" />
+    <list default="true" id="01072c32-80a3-48bc-8a47-e3523c363025" name="Default Changelist" comment="[zinx_v0.4]完成了全局配置模块的搭建和测试">
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sshConfigs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zinx/ziface/imessgae.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zinx/znet/message.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/zinx_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/zinx_project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zinx/znet/connection.go" beforeDir="false" afterPath="$PROJECT_DIR$/zinx/znet/connection.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zinx/znet/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/zinx/znet/server.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +72,41 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[zinx_v0.4]完成了全局配置模块的搭建和测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="[zinx_v0.4]完成了全局配置模块的搭建和测试" />
+  </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="617" y="214" key="#Deployment" timestamp="1608388399595">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="617" y="214" key="#Deployment/0.0.2048.1112@0.0.2048.1112" timestamp="1608388399595" />
+    <state x="601" y="201" key="#SSH_Configurations" timestamp="1608388380668">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="601" y="201" key="#SSH_Configurations/0.0.2048.1112@0.0.2048.1112" timestamp="1608388380668" />
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1608388058816">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1608388058816" />
+    <state x="903" y="286" key="ftp.server.browser" timestamp="1608388398849">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="903" y="286" key="ftp.server.browser/0.0.2048.1112@0.0.2048.1112" timestamp="1608388398849" />
   </component>
 </project>
