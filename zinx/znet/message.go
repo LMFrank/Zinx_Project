@@ -1,15 +1,15 @@
 package znet
 
 type Message struct {
-	DataLen uint32 // 消息的长度
 	Id      uint32 // 消息的ID
+	DataLen uint32 // 消息的长度
 	Data    []byte // 消息的内容
 }
 
 func NewMsgPackage(id uint32, data []byte) *Message {
 	return &Message{
-		DataLen: uint32(len(data)),
 		Id:      id,
+		DataLen: uint32(len(data)),
 		Data:    data,
 	}
 }

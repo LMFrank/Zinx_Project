@@ -3,6 +3,7 @@ package znet
 import (
 	"fmt"
 	"net"
+	"time"
 	"zinx/zinx/utils"
 	"zinx/zinx/ziface"
 )
@@ -18,7 +19,7 @@ type Server struct {
 
 // 启动服务器
 func (s *Server) Start() {
-	fmt.Printf("[Zinx] Server Name: %s, listener at IP: %s, Port:%d is starting\n",
+	fmt.Printf("[Zinx] Server Name: %s, listener at IP: %s, Port: %d is starting\n",
 		utils.GlobalObject.Name, utils.GlobalObject.Host, utils.GlobalObject.TcpPort)
 	fmt.Printf("[Zinx] Version %s, MaxConn: %d, MaxPacketSize: %d\n",
 		utils.GlobalObject.Version, utils.GlobalObject.MaxConn, utils.GlobalObject.MaxPacketSize)
@@ -28,25 +29,25 @@ func (s *Server) Start() {
 		// 获取一个 TCP 的 Addr
 		addr, err := net.ResolveTCPAddr(s.IPVersion, fmt.Sprintf("%s:%d", s.IP, s.Port))
 		if err != nil {
-			fmt.Println("resolve tcp addr error:", err)
+			fmt.Println("Resolve tcp addr error:", err)
 			return
 		}
 
 		// 2. 监听服务器的地址
 		listener, err := net.ListenTCP(s.IPVersion, addr)
 		if err != nil {
-			fmt.Println("listen ", s.IPVersion, " error:", err)
+			fmt.Println("listen ", s.IPVersion, "error:", err)
 			return
 		}
-		fmt.Println("start Zinx server success,", s.Name, "success, Listening...")
-		var cid uint32
-		cid = 0
+		fmt.Printf("Start Zinx server: [%s] success, Listening...", s.Name)
+
+		var cid uint32 = 0
 
 		// 3. 阻塞等待客户端连接，处理客户端连接业务（读写）
 		for {
 			conn, err := listener.AcceptTCP()
 			if err != nil {
-				fmt.Println("Accept err ", err)
+				fmt.Println("Accept error:", err)
 				continue
 			}
 			// 将处理新连接的业务方法和 conn 进行绑定，得到连接模块
@@ -67,7 +68,9 @@ func (s *Server) Stop() {
 // 运行服务器
 func (s *Server) Serve() {
 	s.Start()
-	select {}
+	for {
+		time.Sleep(10 * time.Second)
+	}
 }
 
 func (s *Server) AddRouter(router ziface.IRouter) {

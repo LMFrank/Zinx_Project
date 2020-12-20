@@ -3,8 +3,6 @@ package znet
 import (
 	"bytes"
 	"encoding/binary"
-	"errors"
-	"zinx/zinx/utils"
 	"zinx/zinx/ziface"
 )
 
@@ -64,9 +62,9 @@ func (d *DataPack) Unpack(binaryData []byte) (ziface.IMessage, error) {
 	}
 
 	// 判断 dataLen 的长度是否超出我们允许的最大包长度
-	if utils.GlobalObject.MaxPacketSize > 0 && msg.DataLen > utils.GlobalObject.MaxPacketSize {
-		return nil, errors.New("too large msg data")
-	}
+	//if utils.GlobalObject.MaxPacketSize > 0 && msg.DataLen > utils.GlobalObject.MaxPacketSize {
+	//	return nil, errors.New("too large msg data")
+	//}
 
 	return msg, nil
 }

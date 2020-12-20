@@ -50,16 +50,17 @@ func MockServer() {
 					}
 					if msgHead.GetDataLen() > 0 {
 						// msg 是有 data 数据的，需要再次读取 data 数据
-						msg := msgHead.(*Message)
-						msg.Data = make([]byte, msg.GetDataLen())
-						// 根据 dataLen 从 io 中读取字节流
-						_, err := io.ReadFull(conn, msg.Data)
-						if err != nil {
-							fmt.Println("Server unpack data err:", err)
-							return
-						}
+						if msg, ok := msgHead.(*Message); ok {
+							msg.Data = make([]byte, msg.GetDataLen())
+							// 根据 dataLen 从 io 中读取字节流
+							_, err := io.ReadFull(conn, msg.Data)
+							if err != nil {
+								fmt.Println("Server unpack data err:", err)
+								return
+							}
 
-						fmt.Println("==> Recv Msg: ID=", msg.Id, ", len=", msg.DataLen, ", data=", string(msg.Data))
+							fmt.Println("==> Recv Msg: ID =", msg.Id, ", len =", msg.DataLen, ", data =", string(msg.Data))
+						}
 					}
 				}
 			}(conn)
