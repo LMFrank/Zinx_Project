@@ -19,17 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01072c32-80a3-48bc-8a47-e3523c363025" name="Default Changelist" comment="[zinx_v0.5]完成了消息模块的整体搭建和demo测试">
-      <change afterPath="$PROJECT_DIR$/demo/ZinxV0.6/client0.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/ZinxV0.6/client1.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/ZinxV0.6/conf/zinx.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/ZinxV0.6/server.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zinx/ziface/imsgHandler.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zinx/znet/msgHandler.go" afterDir="false" />
+    <list default="true" id="01072c32-80a3-48bc-8a47-e3523c363025" name="Default Changelist" comment="[zinx_v0.6]完成了消息模块中MsgHandler的封装和demo测试">
+      <change afterPath="$PROJECT_DIR$/demo/ZinxV0.7/client0.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/ZinxV0.7/client1.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/ZinxV0.7/conf/zinx.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/ZinxV0.7/server.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zinx/ziface/iserver.go" beforeDir="false" afterPath="$PROJECT_DIR$/zinx/ziface/iserver.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zinx/utils/globalobj.go" beforeDir="false" afterPath="$PROJECT_DIR$/zinx/utils/globalobj.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zinx/znet/connection.go" beforeDir="false" afterPath="$PROJECT_DIR$/zinx/znet/connection.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zinx/znet/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/zinx/znet/server.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,11 +62,12 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/demo/ZinxV0.6" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/demo/ZinxV0.7" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Code\Go\src\zinx_project\demo\ZinxV0.7" />
       <recent name="D:\Code\Go\src\zinx_project\demo\ZinxV0.6" />
       <recent name="D:\Code\Go\src\zinx_project\demo\ZinxV0.5" />
       <recent name="D:\Code\Go\src\zinx_project\demo\ZinxV0.4" />
@@ -129,7 +127,8 @@
     <MESSAGE value="[zinx_v0.5]完成了基础message模块的搭建" />
     <MESSAGE value="[zinx_v0.5]完成了消息模块中的封包拆包及单元测试" />
     <MESSAGE value="[zinx_v0.5]完成了消息模块的整体搭建和demo测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="[zinx_v0.5]完成了消息模块的整体搭建和demo测试" />
+    <MESSAGE value="[zinx_v0.6]完成了消息模块中MsgHandler的封装和demo测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="[zinx_v0.6]完成了消息模块中MsgHandler的封装和demo测试" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -163,10 +162,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="542" y="200" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1608450280815" />
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1608475446656">
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1608813766701">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1608475446656" />
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1608813766701" />
     <state x="903" y="286" key="ftp.server.browser" timestamp="1608388398849">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
