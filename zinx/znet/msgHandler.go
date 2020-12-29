@@ -11,14 +11,14 @@ import (
 	消息处理模块
 */
 type MsgHandler struct {
-	Apis           map[uint32]ziface.IRouter // 存放每个 MsgID 对应的处理方法
+	APIs           map[uint32]ziface.IRouter // 存放每个 MsgID 对应的处理方法
 	TaskQueue      []chan ziface.IRequest    // 负责 worker 取任务的消息队列
 	WorkerPoolSize uint32                    // 业务工作 worker 池的 worker 数量
 }
 
 func NewMsgHandler() *MsgHandler {
 	return &MsgHandler{
-		Apis:           make(map[uint32]ziface.IRouter),
+		APIs:           make(map[uint32]ziface.IRouter),
 		TaskQueue:      make([]chan ziface.IRequest, utils.GlobalObject.WorkerPoolSize),
 		WorkerPoolSize: utils.GlobalObject.WorkerPoolSize,
 	}
@@ -26,9 +26,9 @@ func NewMsgHandler() *MsgHandler {
 
 // 调度/执行对应的 Router 消息处理方法
 func (m *MsgHandler) DoMsgHandler(request ziface.IRequest) {
-	handler, ok := m.Apis[request.GetMsgID()]
+	handler, ok := m.APIs[request.GetMsgID()]
 	if !ok {
-		fmt.Println("Api msgId =", request.GetMsgID(), "is not found!")
+		fmt.Println("API msgId =", request.GetMsgID(), "is not found!")
 		return
 	}
 
@@ -41,13 +41,13 @@ func (m *MsgHandler) DoMsgHandler(request ziface.IRequest) {
 // 为消息添加具体的处理逻辑
 func (m *MsgHandler) AddRouter(msgID uint32, router ziface.IRouter) {
 	// 判断当前 msg 绑定的 API 处理方法是否存在
-	if _, ok := m.Apis[msgID]; ok {
-		panic("Repeated api , msgId = " + strconv.Itoa(int(msgID)))
+	if _, ok := m.APIs[msgID]; ok {
+		panic("Repeated API , msgId = " + strconv.Itoa(int(msgID)))
 	}
 
 	// 添加 msg 与 API 的绑定关系
-	m.Apis[msgID] = router
-	fmt.Println("Add api MsgID =", msgID, "success!")
+	m.APIs[msgID] = router
+	fmt.Println("Add API MsgID =", msgID, "success!")
 }
 
 // 启动一个 Worker 工作池
