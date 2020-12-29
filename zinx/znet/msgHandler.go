@@ -56,12 +56,12 @@ func (m *MsgHandler) StartWorkerPool() {
 		// 给当前 worker 对应的任务队列开辟空间
 		m.TaskQueue[i] = make(chan ziface.IRequest, utils.GlobalObject.MaxWorkerTaskLen)
 		// 启动当前 Worker，阻塞的等待对应的任务队列是否有消息传递进来
-		go m.startOneWorker(i, m.TaskQueue[i])
+		go m.StartOneWorker(i, m.TaskQueue[i])
 	}
 }
 
 // 启动一个 Worker 工作流程
-func (m *MsgHandler) startOneWorker(workerID int, taskQueue chan ziface.IRequest) {
+func (m *MsgHandler) StartOneWorker(workerID int, taskQueue chan ziface.IRequest) {
 	fmt.Println("Worker ID =", workerID, "is started.")
 	// 不断的阻塞等待队列中的消息
 	for {
