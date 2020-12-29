@@ -21,8 +21,8 @@ type Server struct {
 func (s *Server) Start() {
 	fmt.Printf("[Zinx] Server Name: %s, listener at IP: %s, Port: %d is starting\n",
 		utils.GlobalObject.Name, utils.GlobalObject.Host, utils.GlobalObject.TcpPort)
-	fmt.Printf("[Zinx] Version %s, MaxConn: %d, MaxPacketSize: %d\n",
-		utils.GlobalObject.Version, utils.GlobalObject.MaxConn, utils.GlobalObject.MaxPacketSize)
+	fmt.Printf("[Zinx] Version %s, MaxConn: %d, MaxPackageSize: %d\n",
+		utils.GlobalObject.Version, utils.GlobalObject.MaxConn, utils.GlobalObject.MaxPackageSize)
 	// fmt.Printf("[Start] Server Listener at IP :%s, Port %d, is starting\n", s.IP, s.Port)
 
 	go func() {

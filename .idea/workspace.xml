@@ -19,14 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01072c32-80a3-48bc-8a47-e3523c363025" name="Default Changelist" comment="[zinx_v0.6]完成了消息模块中MsgHandler的封装和demo测试">
-      <change afterPath="$PROJECT_DIR$/demo/ZinxV0.7/client0.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/ZinxV0.7/client1.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/ZinxV0.7/conf/zinx.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/ZinxV0.7/server.go" afterDir="false" />
+    <list default="true" id="01072c32-80a3-48bc-8a47-e3523c363025" name="Default Changelist" comment="[zinx_v0.7]完成了读写协程分离的搭建和测试">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zinx/utils/globalobj.go" beforeDir="false" afterPath="$PROJECT_DIR$/zinx/utils/globalobj.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zinx/znet/connection.go" beforeDir="false" afterPath="$PROJECT_DIR$/zinx/znet/connection.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zinx/ziface/imsgHandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/zinx/ziface/imsgHandler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zinx/znet/datapack.go" beforeDir="false" afterPath="$PROJECT_DIR$/zinx/znet/datapack.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zinx/znet/msgHandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/zinx/znet/msgHandler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zinx/znet/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/zinx/znet/server.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +127,8 @@
     <MESSAGE value="[zinx_v0.5]完成了消息模块中的封包拆包及单元测试" />
     <MESSAGE value="[zinx_v0.5]完成了消息模块的整体搭建和demo测试" />
     <MESSAGE value="[zinx_v0.6]完成了消息模块中MsgHandler的封装和demo测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="[zinx_v0.6]完成了消息模块中MsgHandler的封装和demo测试" />
+    <MESSAGE value="[zinx_v0.7]完成了读写协程分离的搭建和测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="[zinx_v0.7]完成了读写协程分离的搭建和测试" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
