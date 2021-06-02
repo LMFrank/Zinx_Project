@@ -70,7 +70,7 @@ func (s *Server) Start() {
 
 			// 判断当前连接数量是否超过最大个数
 			if s.ConnMgr.Len() >= utils.GlobalObject.MaxConn {
-				fmt.Println("Too many connections!")
+				fmt.Println("=======>Too many connections!<=======")
 				conn.Close()
 				continue
 			}
