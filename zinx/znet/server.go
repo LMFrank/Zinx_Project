@@ -12,12 +12,14 @@ import (
 	Server服务器模块
 */
 type Server struct {
-	Name       string              // 服务器名称
-	IPVersion  string              // 服务器绑定的 ip 版本
-	IP         string              // 服务器监听的 ip 地址
-	Port       int                 // 服务器监听的端口
-	msgHandler ziface.IMsgHandler  // 当前 Server 的消息管理模块，用来绑定 MsgId 和对应的处理方法
-	ConnMgr    ziface.IConnManager // 当前 Server 的连接管理器
+	Name        string                        // 服务器名称
+	IPVersion   string                        // 服务器绑定的 ip 版本
+	IP          string                        // 服务器监听的 ip 地址
+	Port        int                           // 服务器监听的端口
+	msgHandler  ziface.IMsgHandler            // 当前 Server 的消息管理模块，用来绑定 MsgId 和对应的处理方法
+	ConnMgr     ziface.IConnManager           // 当前 Server 的连接管理器
+	OnConnStart func(conn ziface.IConnection) // 该 Server 的连接创建时的 Hook 函数
+	OnConnStop  func(conn ziface.IConnection) // 该 Server 的连接断开时的 Hook 函数
 }
 
 func NewServer() ziface.IServer {
@@ -106,4 +108,30 @@ func (s *Server) AddRouter(msgID uint32, router ziface.IRouter) {
 
 func (s *Server) GetConnMgr() ziface.IConnManager {
 	return s.ConnMgr
+}
+
+// 设置该 Server 的连接创建时 Hook 函数
+func (s *Server) SetOnConnStart(hookFunc func(connection ziface.IConnection)) {
+	s.OnConnStart = hookFunc
+}
+
+// 设置该 Server 的连接断开时的 Hook 函数
+func (s *Server) SetOnConnStop(hookFunc func(ziface.IConnection)) {
+	s.OnConnStop = hookFunc
+}
+
+// 调用连接 OnConnStart Hook 函数
+func (s *Server) CallOnConnStart(conn ziface.IConnection) {
+	if s.OnConnStart != nil {
+		fmt.Println("---> CallOnConnStart....")
+		s.OnConnStart(conn)
+	}
+}
+
+// 调用连接 OnConnStop Hook 函数
+func (s *Server) CallOnConnStop(conn ziface.IConnection) {
+	if s.OnConnStop != nil {
+		fmt.Println("---> CallOnConnStop....")
+		s.OnConnStop(conn)
+	}
 }

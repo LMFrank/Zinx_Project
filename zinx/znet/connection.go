@@ -114,6 +114,8 @@ func (c *Connection) Start() {
 	go c.StartReader()
 	// 启动从当前连接的写数据的业务
 	go c.StartWriter()
+	// 按照用户传递进来的创建连接时需要处理的业务，执行钩子方法
+	c.TcpServer.CallOnConnStart(c)
 }
 
 // 停止连接 结束当前连接的工作
@@ -123,6 +125,9 @@ func (c *Connection) Stop() {
 		return
 	}
 	c.isClosed = true
+
+	// 如果用户注册了该链接的关闭回调业务，那么在此刻应该显示调用
+	c.TcpServer.CallOnConnStop(c)
 
 	// 关闭 socket 连接
 	c.Conn.Close()
