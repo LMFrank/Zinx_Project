@@ -5,19 +5,22 @@ import (
 	"fmt"
 	"io"
 	"net"
+	"sync"
 	"zinx/zinx/utils"
 	"zinx/zinx/ziface"
 )
 
 // 连接模块
 type Connection struct {
-	TcpServer  ziface.IServer     // 当前Conn属于哪个Server
-	Conn       *net.TCPConn       // 当前连接的 socket TCP 套接字
-	ConnID     uint32             // 当前连接的 ID
-	isClosed   bool               // 当前连接的状态
-	ExitChan   chan bool          // 告知当前连接已经退出/停止的 channel，由 Reader 告知 Writer
-	msgChan    chan []byte        // 无缓冲通道，用于读/写 Goroutine 之间的消息通信
-	MsgHandler ziface.IMsgHandler // 当前 server 的消息管理模块，用来绑定 MsgID 和对应的处理业务 API 关系
+	TcpServer    ziface.IServer         // 当前Conn属于哪个Server
+	Conn         *net.TCPConn           // 当前连接的 socket TCP 套接字
+	ConnID       uint32                 // 当前连接的 ID
+	isClosed     bool                   // 当前连接的状态
+	ExitChan     chan bool              // 告知当前连接已经退出/停止的 channel，由 Reader 告知 Writer
+	msgChan      chan []byte            // 无缓冲通道，用于读/写 Goroutine 之间的消息通信
+	MsgHandler   ziface.IMsgHandler     // 当前 server 的消息管理模块，用来绑定 MsgID 和对应的处理业务 API 关系
+	property     map[string]interface{} // 链接属性
+	propertyLock sync.Mutex             // 保护当前property的锁
 }
 
 func NewConnection(server ziface.IServer, conn *net.TCPConn, connID uint32, msgHandler ziface.IMsgHandler) *Connection {
@@ -29,6 +32,7 @@ func NewConnection(server ziface.IServer, conn *net.TCPConn, connID uint32, msgH
 		MsgHandler: msgHandler,
 		msgChan:    make(chan []byte),
 		ExitChan:   make(chan bool, 1),
+		property:   make(map[string]interface{}),
 	}
 
 	c.TcpServer.GetConnMgr().Add(c)
@@ -174,4 +178,31 @@ func (c *Connection) SendMsg(msgId uint32, data []byte) error {
 	c.msgChan <- binaryMsg
 
 	return nil
+}
+
+// 设置连接属性
+func (c *Connection) SetProperty(key string, value interface{}) {
+	c.propertyLock.Lock()
+	defer c.propertyLock.Unlock()
+	c.property[key] = value
+}
+
+// 获取连接属性
+func (c *Connection) GetProperty(key string) (interface{}, error) {
+	c.propertyLock.Lock()
+	c.propertyLock.Unlock()
+
+	if value, ok := c.property[key]; ok {
+		return value, nil
+	} else {
+		return nil, errors.New("no property found")
+	}
+}
+
+// 移除连接属性
+func (c *Connection) RemoveProperty(key string) {
+	c.propertyLock.Lock()
+	defer c.propertyLock.Unlock()
+
+	delete(c.property, key)
 }
